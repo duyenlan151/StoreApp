@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import CategoryListItem from './components/CategoryListItem';
 
@@ -10,10 +10,17 @@ import Bath from './assets/bath.png';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <CategoryListItem title='Thực phẩm chức năng' image={Pharmacy} />
-      <CategoryListItem title='Sữa tắm' image={Bath} />
-      <CategoryListItem title='Dầu gội' image={Soap} />
+    <View style={{ backgroundColor: '#eee' }}>
+      <ScrollView style={{ paddingLeft: 16, paddingRight: 16 }}>
+        <CategoryListItem title='Thực phẩm chức năng' image={Pharmacy} />
+        <CategoryListItem title='Sữa tắm' image={Bath} />
+        <CategoryListItem title='Dầu gội' image={Soap} />
+        <CategoryListItem title='Thực phẩm chức năng' image={Pharmacy} />
+        <CategoryListItem title='Sữa tắm' image={Bath} />
+        <CategoryListItem title='Dầu gội' image={Soap} /><CategoryListItem title='Thực phẩm chức năng' image={Pharmacy} />
+        <CategoryListItem title='Sữa tắm' image={Bath} />
+        <CategoryListItem title='Dầu gội' image={Soap} />
+      </ScrollView>
     </View>
   );
 }
